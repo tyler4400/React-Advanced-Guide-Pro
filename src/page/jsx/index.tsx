@@ -4,6 +4,8 @@ import React  from 'react'
 const toLearn = [ 'react' , 'vue' , 'webpack' , 'nodejs'  ]
 
 const TextComponent = ()=> <div> hello , i am function component </div>
+const aReactElement =  <div> p </div>
+const bar: React.ReactNode = 'div'
 
 /* TODO: ② */
 class Index extends React.Component{
@@ -27,6 +29,8 @@ class Index extends React.Component{
                 {toLearn.map(item=> <div key={item} >let us learn {item} </div> )}
                 {/* 组件类型 */}
                 <TextComponent/>
+                <aReactElement.type {...aReactElement.props}/>
+                {bar}
                 {/* 三元运算 */}
                 {this.status ? <TextComponent /> :  <div>三元运算</div>}
                 {/* 函数执行 */}
